@@ -17,7 +17,7 @@ jobs:
         run: composer install
       - name: Build API docs
         run: |
-          ./vendor/bin/openapi --format yaml --output ./swagger/swagger.yaml ./swagger/swagger.php src
+          ./vendor/bin/openapi --format yaml --output ./docs/swagger.yaml ./app/
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: update api docs
